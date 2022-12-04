@@ -9,7 +9,8 @@ class CheckoutController extends Controller
 {
     public function index(Request $request)
     {
-        if($request->total == 0){
+        if($request->total == 0)
+        {
             return redirect()->back()->with('error', 'Tidak ada barang');
         }
         return view('frontend.checkout.index');

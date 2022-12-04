@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\File;
 
 class CategoryController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         return view('admin.category.index');
     }

@@ -159,7 +159,7 @@
         @foreach ($sliders as $key => $sliderItem)
         <div class="carousel-item {{ $key == 0 ? 'active':'' }}" data-bs-interval="10000">
             @if ($sliderItem->image)
-            <img src="{{ asset("$sliderItem->image") }}" class="d-block w-100" height="300" alt="...">
+            <img src="{{ asset("$sliderItem->image") }}" class="d-block w-100" style="object-fit: cover;" height="300" alt="..." >
             @endif
             {{-- <div class="carousel-caption">
                 <div class="custom-carousel-content">

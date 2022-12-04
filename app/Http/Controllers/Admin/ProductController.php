@@ -16,9 +16,10 @@ use App\Http\Requests\ProductFormRequest;
 
 class ProductController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $products = Product::paginate(10);
+        $user = $request->user();
+        $products = Product::where('user_id', $user->id)->paginate(10);
         return view('seller.products.index', compact('products'));
     }
 
@@ -35,6 +36,7 @@ class ProductController extends Controller
         $validatedData = $request->validated();
         $category = Category::findOrFail($validatedData['category_id']);
         $product = $category->products()->create([
+            'user_id' => $request->user()->id,
             'category_id' => $validatedData['category_id'],
             'name' => $validatedData['name'],
             'slug' => Str::slug($validatedData['slug']),
@@ -102,6 +104,7 @@ class ProductController extends Controller
         if($product)
         {
             $product->update([
+                'user_id' => $request->user()->id,
                 'category_id' => $validatedData['category_id'],
                 'name' => $validatedData['name'],
                 'slug' => Str::slug($validatedData['slug']),
