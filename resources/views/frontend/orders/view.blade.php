@@ -65,7 +65,7 @@
                                     <td width="10%">
                                         @if ($orderItem->product->productImages)
                                         <img src="{{ asset($orderItem->product->productImages[0]->image) }}"
-                                            style="width: 50px; height: 50px" alt="">
+                                            style="width: 50px; height: 50px"; object-fit: contain; alt="">
                                         @else
                                         <img src="" style="width: 50px; height: 50px" alt="">
                                         @endif
