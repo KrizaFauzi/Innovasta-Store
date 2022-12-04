@@ -7,8 +7,11 @@ use Illuminate\Http\Request;
 
 class CheckoutController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+        if($request->total == 0){
+            return redirect()->back()->with('error', 'Tidak ada barang');
+        }
         return view('frontend.checkout.index');
     }
 }

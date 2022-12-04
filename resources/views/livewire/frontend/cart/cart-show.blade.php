@@ -4,7 +4,7 @@
         <div id="liveToast" class="toast show border-0" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
                 <div class="bg-info rounded me-2 shadow-sm" style="padding: 11px;"></div>
-                <strong class="me-auto">GoodFance Bag</strong>
+                <strong class="me-auto">{{ $websiteSetting->website_name }}</strong>
                 {{-- <small>11 mins ago</small> --}}
                 <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
@@ -129,7 +129,11 @@
                         <span class="float-end">Rp. {{ $totalPrice }}</span>
                     </h4>
                     <hr>
-                    <a href="{{ url('/checkout') }}" class="btn btn-warning w-100">Checkout</a>
+                    <form action="{{ url('checkout_first') }}" method="POST">
+                    @csrf
+                        <input type="hidden" name="total" value="{{ $totalPrice }}" >
+                        <button class="btn btn-warning w-100">Checkout</button>
+                    </form>
                 </div>
             </div>
         </div>

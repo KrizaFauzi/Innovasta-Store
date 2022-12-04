@@ -42,7 +42,7 @@
                 @forelse ($brands as $brand)
                 <tr>
                     <th scope="row">
-                        {{ $brand->id }}
+                        {{ $no++ }}
                     </th>
                     <td>
                         {{ $brand->name }}

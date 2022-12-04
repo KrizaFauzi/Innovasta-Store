@@ -35,7 +35,7 @@
             @foreach ($categories as $category)
             <tr>
                 <th scope="row">
-                    {{ $category->id }}
+                    {{ $no++ }}
                 </th>
                 <td>
                     {{ $category->name }}

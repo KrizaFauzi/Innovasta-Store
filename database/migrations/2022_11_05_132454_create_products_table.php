@@ -21,9 +21,11 @@ return new class extends Migration
             $table->string('brand')->nullable();
             $table->mediumText('small_description')->nullable();
             $table->longText('description')->nullable();
-            
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('categories')->onDelete('cascade');
+
             $table->integer('original_price');
-            $table->integer('selling_price');
+            $table->integer('selling_price')->nullable();
             $table->integer('quantity');
             $table->tinyInteger('trending')->default('0')->comment('1=trending,0=not-trending');
             $table->tinyInteger('featured')->default('0')->comment('1=featured,0=not-featured');
