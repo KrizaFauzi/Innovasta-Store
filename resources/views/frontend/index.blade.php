@@ -318,7 +318,7 @@
                             @endif
                         </div>
                         <div class="card-body pt-2">
-                            <p class="brand mb-0" style="font-size: 14.3px; color: #ee6c4d; font-weight: 500;">
+                            <p class="brand mb-0" style="font-size: 14.3px; color: #ee6c4d; font-weight: 500; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
                                 <span class="text-muted">Brand :</span> {{ $productItem->brand }}
                             </p>
                             <p class="product-name mb-1">
@@ -334,12 +334,12 @@
                                         class="selling-price card-text">Rp.
                                             {{$productItem->selling_price}}
                                         </span>
-                                        <span style="font-size: 16px;"
+                                        <span style="font-size: 16px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;"
                                             class="original-price text-muted text-decoration-line-through">Rp.
                                             {{$productItem->original_price}}
                                         </span>
                                     @else
-                                        <span style="font-size: 19px; font-weight: 500; color: black;"
+                                        <span style="font-size: 19px; font-weight: 500; color: black; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;"
                                             class="original-price card-text">Rp.
                                             {{$productItem->original_price}}
                                         </span>
@@ -397,7 +397,7 @@
                         @endif
                     </div>
                     <div class="card-text">
-                        <p class="brand mb-0" style="font-size: 14.3px; color: #ee6c4d; font-weight: 500;">
+                        <p class="brand mb-0" style="font-size: 14.3px; color: #ee6c4d; font-weight: 500; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
                             <span class="text-muted">Brand :</span> {{ $productItem->brand }}
                         </p>
                         <p class="product-name mb-1">
@@ -409,16 +409,16 @@
                         <a href="{{ url('/collections/'.$productItem->category->slug.'/'.$productItem->slug) }}">
                             <div>
                                 @if ($productItem->selling_price != null)
-                                    <span style="font-size: 19px; font-weight: 500; color: black;"
+                                    <span style="font-size: 19px; font-weight: 500;"
                                         class="selling-price card-text">Rp.
                                         {{$productItem->selling_price}}
                                     </span>
-                                    <span style="font-size: 16px;"
+                                    <span style="font-size: 16px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;"
                                         class="original-price text-muted text-decoration-line-through">Rp.
                                         {{$productItem->original_price}}
                                     </span>
                                 @else
-                                    <span style="font-size: 19px; font-weight: 500; color: black;"
+                                    <span style="font-size: 19px; font-weight: 500; color: black; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;"
                                         class="original-price card-text">Rp.
                                         {{$productItem->original_price}}
                                     </span>
@@ -473,7 +473,7 @@
                             @endif
                         </div>
                         <div class="card-body" style="min-width: 210px; max-width: 210px;">
-                            <p class="brand mb-0" style="font-size: 14.3px; color: #ee6c4d; font-weight: 500;">
+                            <p class="brand mb-0" style="font-size: 14.3px; color: #ee6c4d; font-weight: 500; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
                                 <span class="text-muted">Brand :</span> {{ $productItem->brand }}
                             </p>
                             <p class="product-name mb-1">
@@ -489,12 +489,12 @@
                                             class="selling-price card-text">Rp.
                                             {{$productItem->selling_price}}
                                         </span>
-                                        <span style="font-size: 16px;"
+                                        <span style="font-size: 16px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;"
                                             class="original-price text-muted text-decoration-line-through">Rp.
                                             {{$productItem->original_price}}
                                         </span>
                                     @else
-                                        <span style="font-size: 19px; font-weight: 500; color: black;"
+                                        <span style="font-size: 19px; font-weight: 500; color: black; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;"
                                             class="original-price card-text">Rp.
                                             {{$productItem->original_price}}
                                         </span>
@@ -558,7 +558,7 @@
                             @endif
                         </div>
                         <div class="card-body" style="min-width: 210px; max-width: 210px;">
-                            <p class="brand mb-0" style="font-size: 14.3px; color: #ee6c4d; font-weight: 500;">
+                            <p class="brand mb-0" style="font-size: 14.3px; color: #ee6c4d; font-weight: 500; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
                                 <span class="text-muted">Brand :</span> {{ $productItem->brand }}
                             </p>
                             <p class="product-name mb-1">
@@ -570,16 +570,16 @@
                             <a href="{{ url('/collections/'.$productItem->category->slug.'/'.$productItem->slug) }}">
                                 <div>
                                     @if ($productItem->selling_price != null)
-                                        <span style="font-size: 19px; font-weight: 500; color: black;"
+                                        <span style="font-size: 19px; font-weight: 500; color: black; "
                                             class="selling-price card-text">Rp.
                                             {{$productItem->selling_price}}
                                         </span>
-                                        <span style="font-size: 16px;"
+                                        <span style="font-size: 16px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;"
                                             class="original-price text-muted text-decoration-line-through">Rp.
                                             {{$productItem->original_price}}
                                         </span>
                                     @else
-                                        <span style="font-size: 19px; font-weight: 500; color: black;"
+                                        <span style="font-size: 19px; font-weight: 500; color: black; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;"
                                             class="original-price card-text">Rp.
                                             {{$productItem->original_price}}
                                         </span>
