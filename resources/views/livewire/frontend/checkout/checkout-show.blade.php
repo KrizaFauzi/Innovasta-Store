@@ -115,10 +115,10 @@
                                             <hr />
                                             {{-- <button type="button" wire:loading.attr="disabled" class="btn btn-warning">Pay Now (Online Payment)</button> --}}
                                             {{-- Paypal Button Payment --}}
-                                            <div>
+                                            {{-- <div> --}}
                                                 <!-- Set up a container element for the button -->
-                                                <div class="btn" id="paypal-button-container"></div>
-                                            </div>
+                                                {{-- <div class="btn" id="paypal-button-container"></div>--}}
+                                            {{-- </div> --}}
                                         </div>
                                         <div class="tab-pane fade" id="gatewayPayment" role="tabpanel"
                                             aria-labelledby="gatewayPayment-tab" tabindex="0">
